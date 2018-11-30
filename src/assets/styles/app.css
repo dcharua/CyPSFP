@@ -1,0 +1,13 @@
+body, html {
+  height: 100%;
+  font-family: 'Lato' ,'Open Sans', sans-serif;
+}
+
+
+
+p{
+  font-size: 1.6vw ;
+}
+h1{
+  font-size: 4.2vw;
+}

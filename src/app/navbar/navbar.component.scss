@@ -1,0 +1,48 @@
+nav {
+  margin-top: 30px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+nav ul a {
+  color: #434343;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+nav ul a:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.logo-img{
+  width: 80px;
+}
+nav .brand-logo {
+  left: 75px;
+}
+.vertical-line{
+  margin-top: 10px;
+  position: absolute;
+  width: 1px;
+  height: 41px;
+  border: 1px solid #434343;
+}
+
+.links-group{
+  margin-right: 75px !important;
+}
+
+.cart-btn{
+  line-height: 3;
+  margin-left: 20px;
+  width: 88px;
+  height: 41px;
+  border-radius: 4px !important;
+  background-color: #434343 !important;
+  color: #fff !important;
+  font-family: Lato !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  cursor: pointer;
+}

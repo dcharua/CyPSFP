@@ -1,0 +1,22 @@
+
+<div class="container section" style="padding:10% 0">
+  <form class="row">
+    <div class="file-field input-field col s6">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" (change)="incomingfile($event)">
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text">
+      </div>
+    </div>
+    <button type="button"  style="margin-left: 20px;"class="waves-effect waves-light btn-large" (click)="Upload()" >Upload</button>
+  </form>
+</div>
+
+
+
+
+
+<!-- <input type="file" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
+<button type="button" class="btn btn-info" (click)="Upload()" >Upload</button> -->
