@@ -1,5 +1,5 @@
 {
-  "name": "Organizador de Horarios",
+  "name": "Organizador-de-Horarios",
   "version": "0.0.0",
   "scripts": {
     "start": "node server.js",
