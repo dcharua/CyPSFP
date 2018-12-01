@@ -1,8 +1,9 @@
 
-<div class="container section" style="padding:10% 0">
+<div class="container section" style="padding:5% 0">
+  <h4 style="margin: 20px 0;">Agrega el archivo de excel</h4>
   <form class="row">
     <div class="file-field input-field col s6">
-      <div class="btn">
+      <div class="btn-large">
         <span>File</span>
         <input type="file" (change)="incomingfile($event)">
       </div>
@@ -10,7 +11,7 @@
         <input class="file-path validate" type="text">
       </div>
     </div>
-    <button type="button"  style="margin-left: 20px;"class="waves-effect waves-light btn-large" (click)="Upload()" >Upload</button>
+    <button type="button"  style="margin:10px 20px 0 0;"class="waves-effect waves-light btn-large grey darken-4" (click)="Upload()" >Upload</button>
   </form>
 </div>
 
