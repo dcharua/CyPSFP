@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 //import { read, IWorkBook } from 'ts-xlsx';
 import * as XLSX from 'ts-xlsx';
-
+import { AlertService } from '../_services';
+declare var $:any;
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
@@ -12,11 +13,11 @@ import * as XLSX from 'ts-xlsx';
 export class UploadComponent implements OnInit {
   arrayBuffer: any;
   file: File;
-  public empalmadas: Array = [];
+  empalmadas: Array<any> = [];
 
   constructor(
-    public route: ActivatedRoute
-  ) { }
+    public route: ActivatedRoute,
+    private alertService: AlertService) { }
 
   public ngOnInit() {
   }
@@ -63,7 +64,7 @@ export class UploadComponent implements OnInit {
                 added = true;
                 break;
               }
-              if (!added)
+              // if (!added)
         }
             this.empalmadas.push({ primera: arr[i], segunda: arr[j], dia: 1 })
           }
@@ -80,6 +81,11 @@ export class UploadComponent implements OnInit {
         }
       }
     }
-    console.log(this.empalmadas);
+    if(this.empalmadas.length > 0){
+      $("#results").fadeIn();
+    } else{
+        
+        this.alertService.error("No se encontraron empalmes :)");
+    }
   }
 }
