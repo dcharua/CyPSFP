@@ -1,4 +1,3 @@
-
 <div class="container section" style="padding:5% 0">
   <h4 style="margin: 20px 0;">Agrega el archivo de excel</h4>
   <form class="row">
@@ -11,13 +10,59 @@
         <input class="file-path validate" type="text">
       </div>
     </div>
-    <button type="button"  style="margin:10px 20px 0 0;"class="waves-effect waves-light btn-large grey darken-4" (click)="Upload()" >Upload</button>
+    <button type="button" style="margin:10px 20px 0 0;" class="waves-effect waves-light btn-large grey darken-4" (click)="Upload()">Upload</button>
   </form>
+
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Empalmes</th>
+          <th scope="col">Numero de clase</th>
+          <th scope="col">Clave</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Dia 1</th>
+          <th scope="col">Hora 1</th>
+          <th scope="col">Dia 2</th>
+          <th scope="col">Hora 2</th>
+          <th scope="col">Grupo</th>
+          <th scope="col">Salon</th>
+          <th scope="col">Semestre</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let clase of empalmadas; let i = index">
+        <tr>
+          <th scope="row">{{i+1}}</th>
+          <td>Primer Clase</td>
+          <td>{{clase.primera.Clave}}</td>
+          <td>{{clase.primera.Nombre}}</td>
+          <td>{{clase.primera["Día 1"]}}</td>
+          <td>{{clase.primera["Hora 1"]}}</td>
+          <td>{{clase.primera["Día 2"]}}</td>
+          <td>{{clase.primera["Hora 2"]}}</td>
+          <td>{{clase.primera.Grupo}}</td>
+          <td>{{clase.primera["Salón 1"]}}</td>
+          <td>{{clase.primera.Semestre}}</td>
+        </tr>
+        <tr>
+          <th></th>
+          <td>Segunda Clase</td>
+          <td>{{clase.segunda.Clave}}</td>
+          <td>{{clase.segunda.Nombre}}</td>
+          <td>{{clase.segunda["Día 1"]}}</td>
+          <td>{{clase.segunda["Hora 1"]}}</td>
+          <td *ngIf="clase.segunda['Día 2']">{{clase.segunda["Día 2"]}}</td>
+          <td *ngIf="!clase.segunda['Día 2']">No hay salón</td>
+          <td *ngIf="clase.segunda['Hora 2']">{{clase.segunda["Hora 2"]}}</td>
+          <td *ngIf="!clase.segunda['Hora 2']">No hay salón</td>
+          <td>{{clase.segunda.Grupo}}</td>
+          <td *ngIf="clase.segunda['Salón 1']">{{clase.segunda["Salón 1"]}}</td>
+          <td *ngIf="!clase.segunda['Salón 1']">No hay salón</td>
+          <td>{{clase.segunda.Semestre}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
 
-
-
-
-
-<!-- <input type="file" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx">
-<button type="button" class="btn btn-info" (click)="Upload()" >Upload</button> -->
+<!-- <input type="file" (change)="incomingfile($event)" placeholder="Upload file" accept=".xlsx"> <button type="button" class="btn btn-info" (click)="Upload()" >Upload</button> -->
