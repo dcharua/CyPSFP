@@ -70,7 +70,7 @@ npm run build:docker
 
 En el folder principal:
 
-`docker build -t nombre-ejemplo`
+`docker build -t nombre-ejemplo .`
 
 Para borrar imagenes intermedias que crea docker en el build:
 
