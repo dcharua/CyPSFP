@@ -76,7 +76,7 @@ export class UploadComponent implements OnInit {
               }
             }
             if(!added)
-              empalmadas.push({primera: arr[i], segunda: arr[j], dia:2})
+              this.empalmadas.push({primera: arr[i], segunda: arr[j], dia:2})
           }
         }
       }
