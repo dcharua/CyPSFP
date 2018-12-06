@@ -82,6 +82,7 @@ export class UploadComponent implements OnInit {
       }
 
     }
+    console.log("actualizado");
     if(this.empalmadas.length > 0){
       $("#results").fadeIn();
     } else{
