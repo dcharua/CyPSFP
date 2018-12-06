@@ -64,9 +64,9 @@ export class UploadComponent implements OnInit {
                 added = true;
                 break;
               }
-              // if (!added)
-        }
-            this.empalmadas.push({ primera: arr[i], segunda: arr[j], dia: 1 })
+              if (!added)
+                this.empalmadas.push({ primera: arr[i], segunda: arr[j], dia: 1 })
+            }
           }
           if (arr[j]['Día 2'] == arr[i]['Día 2'] && arr[j]['Hora 2'] == arr[i]['Hora 2'] && arr[j]['Día 2'] != undefined && arr[j]['Hora 2'] != undefined) {
             added = true;
@@ -84,7 +84,7 @@ export class UploadComponent implements OnInit {
     if(this.empalmadas.length > 0){
       $("#results").fadeIn();
     } else{
-        
+
         this.alertService.error("No se encontraron empalmes :)");
     }
   }
