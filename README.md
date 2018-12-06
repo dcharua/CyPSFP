@@ -93,6 +93,8 @@ Una vez que se logró instalar todo y el servidor funciona de manera correcta, l
 1. Registrar un nuevo usuario en el boton de registro.
 2. Entrar con el recién creado login en la ventana apropiada.
 3. Una vez dentro del sitio se tiene la opción de adjuntar un archivo.
+4. Al subir el archivo excel, automaticamente muestra los resultados en una conveniente tabla junto con los empalmes.
+5. Para salir solo se le da click en logout. 
 
 ## Licencia:
  [MIT](/LICENSE)
