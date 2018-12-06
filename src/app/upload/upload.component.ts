@@ -59,18 +59,18 @@ export class UploadComponent implements OnInit {
         if(arr[j].Semestre >= actualSemester-1 && arr[j].Semestre <= actualSemester+1){
           added = false;
           if(arr[j]['Día 1'] == arr[i]['Día 1'] && arr[j]['Hora 1'] == arr[i]['Hora 1'] && arr[j]['Día 1'] != undefined && arr[j]['Hora 1'] != undefined){
-            for (var k in empalmadas) {
-              if(empalmadas[k].primera == arr[j] && empalmadas[k].segunda == arr[i] && empalmadas[k].dia == 1){
+            for (var k in this.empalmadas) {
+              if(this.empalmadas[k].primera == arr[j] && this.empalmadas[k].segunda == arr[i] && this.empalmadas[k].dia == 1){
                 added = true;
                 break;
               }
-              if (!added)
-                this.empalmadas.push({ primera: arr[i], segunda: arr[j], dia: 1 })
             }
+            if (!added)
+              this.empalmadas.push({ primera: arr[i], segunda: arr[j], dia: 1 })
           }
           if(arr[j]['Día 2'] == arr[i]['Día 2'] && arr[j]['Hora 2'] == arr[i]['Hora 2'] && arr[j]['Día 2'] != undefined && arr[j]['Hora 2'] != undefined){
-            for (var k in empalmadas) {
-              if(empalmadas[k].primera == arr[j] && empalmadas[k].segunda == arr[i] && empalmadas[k].dia == 2){
+            for (var k in this.empalmadas) {
+              if(this.empalmadas[k].primera == arr[j] && this.empalmadas[k].segunda == arr[i] && this.empalmadas[k].dia == 2){
                 added = true;
                 break;
               }
@@ -86,7 +86,6 @@ export class UploadComponent implements OnInit {
     if(this.empalmadas.length > 0){
       $("#results").fadeIn();
     } else{
-
         this.alertService.error("No se encontraron empalmes :)");
     }
   }
